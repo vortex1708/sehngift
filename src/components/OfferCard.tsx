@@ -1,9 +1,9 @@
-import { Flame, BadgeCheck } from "lucide-react";
+import { Flame } from "lucide-react";
 import { Button } from "./ui/button";
 import { cn } from "@/lib/utils";
 
 interface OfferCardProps {
-  image: React.ReactNode;
+  image: string;
   category: string;
   categoryColor?: "green" | "lime";
   title: string;
@@ -12,6 +12,7 @@ interface OfferCardProps {
   buttonText?: string;
   variant?: "green" | "lime";
   onClick?: () => void;
+  imageBgClass?: string;
 }
 
 const OfferCard = ({
@@ -24,15 +25,15 @@ const OfferCard = ({
   buttonText = "Start Now",
   variant = "green",
   onClick,
+  imageBgClass,
 }: OfferCardProps) => {
   return (
     <div className="bg-gradient-card border border-border/50 rounded-2xl overflow-hidden transition-all duration-300 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/10 group">
       {/* Image section */}
       <div
         className={cn(
-          "relative h-48 md:h-64 flex items-center justify-center",
-          variant === "green" && "bg-gradient-green",
-          variant === "lime" && "bg-gradient-lime"
+          "relative h-48 md:h-56 flex items-center justify-center p-6",
+          imageBgClass || (variant === "green" ? "bg-gradient-green" : "bg-gradient-lime")
         )}
       >
         {isPopular && (
@@ -42,9 +43,12 @@ const OfferCard = ({
           </span>
         )}
         
-        <div className="text-4xl md:text-6xl font-bold text-foreground">
-          {image}
-        </div>
+        <img 
+          src={image} 
+          alt={title}
+          className="max-w-full max-h-full w-auto h-auto object-contain rounded-lg"
+          style={{ maxHeight: '140px' }}
+        />
       </div>
 
       {/* Content section */}

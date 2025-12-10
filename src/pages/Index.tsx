@@ -16,7 +16,7 @@ const Index = () => {
           <div className="container mx-auto px-4 text-center">
             <Logo />
             <p className="text-muted-foreground text-sm mt-4">
-              © 2025 FastCash.gg - All rights reserved
+              © 2025 FastCash.cc - All rights reserved
             </p>
           </div>
         </footer>

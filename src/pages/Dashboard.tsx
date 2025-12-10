@@ -1,7 +1,10 @@
 import Header from "@/components/Header";
 import OfferCard from "@/components/OfferCard";
 import Logo from "@/components/Logo";
-import { Apple, ShoppingCart, Tv, Target } from "lucide-react";
+import appleLogo from "@/assets/apple-logo.png";
+import walmartLogo from "@/assets/walmart-logo.jpeg";
+import netflixLogo from "@/assets/netflix-logo.jpeg";
+import targetLogo from "@/assets/target-logo.png";
 
 const Dashboard = () => {
   const handleOfferClick = (url: string) => {
@@ -11,43 +14,47 @@ const Dashboard = () => {
   const offers = [
     {
       id: 1,
-      image: <Apple className="w-16 h-16 md:w-24 md:h-24" />,
+      image: appleLogo,
       category: "GIFT CARD",
       title: "Apple $1,000 Gift Card",
       value: "$1,000",
       isPopular: true,
       variant: "green" as const,
       url: "https://trkfy.org/aff_c?offer_id=1701&aff_id=14896",
+      bgClass: "bg-white",
     },
     {
       id: 2,
-      image: <ShoppingCart className="w-16 h-16 md:w-24 md:h-24" />,
+      image: walmartLogo,
       category: "GIFT CARD",
       title: "Walmart $750 Gift Card",
       value: "$750",
       isPopular: false,
       variant: "lime" as const,
       url: "https://gloffers.org/aff_c?offer_id=1157&aff_id=14896",
+      bgClass: "bg-[#0071ce]",
     },
     {
       id: 3,
-      image: <Tv className="w-16 h-16 md:w-24 md:h-24" />,
+      image: netflixLogo,
       category: "JOB",
       title: "Netflix Reviewer Job",
       value: "$200/hr",
       isPopular: true,
       variant: "green" as const,
       url: "https://trkio.org/aff_c?offer_id=2216&aff_id=14896",
+      bgClass: "bg-black",
     },
     {
       id: 4,
-      image: <Target className="w-16 h-16 md:w-24 md:h-24" />,
+      image: targetLogo,
       category: "GIFT CARD",
       title: "Target $750 Gift Card",
       value: "$750",
       isPopular: false,
       variant: "lime" as const,
       url: "https://glctrk.org/aff_c?offer_id=1381&aff_id=14896",
+      bgClass: "bg-white",
     },
   ];
 
@@ -71,7 +78,7 @@ const Dashboard = () => {
           </div>
 
           {/* Offers grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             {offers.map((offer) => (
               <OfferCard
                 key={offer.id}
@@ -83,6 +90,7 @@ const Dashboard = () => {
                 variant={offer.variant}
                 buttonText="Start Now"
                 onClick={() => handleOfferClick(offer.url)}
+                imageBgClass={offer.bgClass}
               />
             ))}
           </div>
@@ -101,7 +109,7 @@ const Dashboard = () => {
         <div className="container mx-auto px-4 text-center">
           <Logo />
           <p className="text-muted-foreground text-sm mt-4">
-            © 2025 FastCash.gg - All rights reserved
+            © 2025 FastCash.cc - All rights reserved
           </p>
         </div>
       </footer>
