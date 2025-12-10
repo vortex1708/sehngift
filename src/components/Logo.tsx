@@ -7,7 +7,7 @@ const Logo = () => {
       <span className="text-2xl md:text-3xl font-black tracking-tight text-gradient-lime">
         CASH
       </span>
-      <span className="text-sm font-bold text-muted-foreground ml-0.5">.GG</span>
+      <span className="text-sm font-bold text-muted-foreground ml-0.5">.CC</span>
     </div>
   );
 };
