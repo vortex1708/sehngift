@@ -1,15 +1,11 @@
 import Header from "@/components/Header";
 import OfferCard from "@/components/OfferCard";
 import Logo from "@/components/Logo";
-import { Apple, ShoppingCart, Tv } from "lucide-react";
-import { toast } from "@/hooks/use-toast";
+import { Apple, ShoppingCart, Tv, Target } from "lucide-react";
 
 const Dashboard = () => {
-  const handleOfferClick = (offerName: string) => {
-    toast({
-      title: "Offer Selected!",
-      description: `You clicked on: ${offerName}. Redirecting...`,
-    });
+  const handleOfferClick = (url: string) => {
+    window.open(url, "_blank", "noopener,noreferrer");
   };
 
   const offers = [
@@ -21,6 +17,7 @@ const Dashboard = () => {
       value: "$1,000",
       isPopular: true,
       variant: "green" as const,
+      url: "https://trkfy.org/aff_c?offer_id=1701&aff_id=14896",
     },
     {
       id: 2,
@@ -30,6 +27,7 @@ const Dashboard = () => {
       value: "$750",
       isPopular: false,
       variant: "lime" as const,
+      url: "https://gloffers.org/aff_c?offer_id=1157&aff_id=14896",
     },
     {
       id: 3,
@@ -39,6 +37,17 @@ const Dashboard = () => {
       value: "$200/hr",
       isPopular: true,
       variant: "green" as const,
+      url: "https://trkio.org/aff_c?offer_id=2216&aff_id=14896",
+    },
+    {
+      id: 4,
+      image: <Target className="w-16 h-16 md:w-24 md:h-24" />,
+      category: "GIFT CARD",
+      title: "Target $750 Gift Card",
+      value: "$750",
+      isPopular: false,
+      variant: "lime" as const,
+      url: "https://glctrk.org/aff_c?offer_id=1381&aff_id=14896",
     },
   ];
 
@@ -73,7 +82,7 @@ const Dashboard = () => {
                 isPopular={offer.isPopular}
                 variant={offer.variant}
                 buttonText="Start Now"
-                onClick={() => handleOfferClick(offer.title)}
+                onClick={() => handleOfferClick(offer.url)}
               />
             ))}
           </div>
