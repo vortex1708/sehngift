@@ -20,7 +20,7 @@ const Dashboard = () => {
       value: "$1,000",
       isPopular: true,
       variant: "green" as const,
-      url: "https://trkfy.org/aff_c?offer_id=1701&aff_id=14896",
+      url: "https://gloffers.org/aff_c?offer_id=1168&aff_id=14896",
       bgClass: "bg-white",
     },
     {
