@@ -61,7 +61,7 @@ const Dashboard = () => {
       id: 5,
       image: crumblLogo,
       category: "GIFT CARD",
-      title: "Crumbl Cookies $100 Gift Card",
+      title: "Crumbl $100 Gift Card",
       value: "$100",
       isPopular: false,
       variant: "lime" as const,
