@@ -5,6 +5,7 @@ import appleLogo from "@/assets/apple-logo.png";
 import walmartLogo from "@/assets/walmart-logo.jpeg";
 import netflixLogo from "@/assets/netflix-logo.jpeg";
 import targetLogo from "@/assets/target-logo.png";
+import crumblLogo from "@/assets/crumbl-logo.jpeg";
 
 const Dashboard = () => {
   const handleOfferClick = (url: string) => {
@@ -55,6 +56,17 @@ const Dashboard = () => {
       variant: "lime" as const,
       url: "https://glctrk.org/aff_c?offer_id=1381&aff_id=14896",
       bgClass: "bg-white",
+    },
+    {
+      id: 5,
+      image: crumblLogo,
+      category: "GIFT CARD",
+      title: "Crumbl Cookies $100 Gift Card",
+      value: "$100",
+      isPopular: false,
+      variant: "lime" as const,
+      url: "https://glctrk.org/aff_c?offer_id=1176&aff_id=14896",
+      bgClass: "bg-[#fce4ec]",
     },
   ];
 
