@@ -26,6 +26,17 @@ const Dashboard = () => {
     },
     {
       id: 2,
+      image: crumblLogo,
+      category: "GIFT CARD",
+      title: "Crumbl $100 Gift Card",
+      value: "$100",
+      isPopular: false,
+      variant: "lime" as const,
+      url: "https://glctrk.org/aff_c?offer_id=1176&aff_id=14896",
+      bgClass: "bg-[#fce4ec]",
+    },
+    {
+      id: 3,
       image: walmartLogo,
       category: "GIFT CARD",
       title: "Walmart $750 Gift Card",
@@ -36,7 +47,7 @@ const Dashboard = () => {
       bgClass: "bg-[#0071ce]",
     },
     {
-      id: 3,
+      id: 4,
       image: netflixLogo,
       category: "JOB",
       title: "Netflix Reviewer Job",
@@ -47,7 +58,7 @@ const Dashboard = () => {
       bgClass: "bg-black",
     },
     {
-      id: 4,
+      id: 5,
       image: targetLogo,
       category: "GIFT CARD",
       title: "Target $750 Gift Card",
@@ -56,17 +67,6 @@ const Dashboard = () => {
       variant: "lime" as const,
       url: "https://glctrk.org/aff_c?offer_id=1381&aff_id=14896",
       bgClass: "bg-white",
-    },
-    {
-      id: 5,
-      image: crumblLogo,
-      category: "GIFT CARD",
-      title: "Crumbl $100 Gift Card",
-      value: "$100",
-      isPopular: false,
-      variant: "lime" as const,
-      url: "https://glctrk.org/aff_c?offer_id=1176&aff_id=14896",
-      bgClass: "bg-[#fce4ec]",
     },
   ];
 
