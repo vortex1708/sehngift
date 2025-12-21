@@ -5,7 +5,7 @@ import appleLogo from "@/assets/apple-logo.png";
 import walmartLogo from "@/assets/walmart-logo.jpeg";
 import netflixLogo from "@/assets/netflix-logo.jpeg";
 import targetLogo from "@/assets/target-logo.png";
-import crumblLogo from "@/assets/crumbl-logo.jpeg";
+import starbucksLogo from "@/assets/starbucks-logo.jpeg";
 
 const Dashboard = () => {
   const handleOfferClick = (url: string) => {
@@ -15,14 +15,14 @@ const Dashboard = () => {
   const offers = [
     {
       id: 1,
-      image: crumblLogo,
+      image: starbucksLogo,
       category: "GIFT CARD",
-      title: "Crumbl $100 Gift Card",
+      title: "Starbucks $100 Gift Card",
       value: "$100",
       isPopular: true,
       variant: "green" as const,
-      url: "https://glctrk.org/aff_c?offer_id=1176&aff_id=14896",
-      bgClass: "bg-[#fce4ec]",
+      url: "https://glctrk.org/aff_c?offer_id=1741&aff_id=14896",
+      bgClass: "bg-white",
     },
     {
       id: 2,
